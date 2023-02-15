@@ -1,4 +1,3 @@
-import functools
 from datetime import datetime, timedelta
 
 def difference(start_time, end_time):
