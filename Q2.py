@@ -1,4 +1,3 @@
-import time
 def person_name(names_list):
     #In Below Line i have calculate lenght of every word in list using lenght-function
     length_element = [len(name) for name in names_list]
