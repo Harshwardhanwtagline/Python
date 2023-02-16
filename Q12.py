@@ -8,8 +8,7 @@ class BankAccount:
     def check_pin(self, pin):
         if self.pin == pin:
             return "Account Holder Name: {}\nAccount Number: {}\nTotal Balance: {}".format(self.acc_name, self.acc_number, self.balance)
-        else:
-            return "Please Enter Correct Pin"
+        return "Please Enter Correct Pin"
     
     def deposit(self, pin, amount):
         if (self.pin == pin):
