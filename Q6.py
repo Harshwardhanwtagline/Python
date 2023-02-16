@@ -1,8 +1,8 @@
 def count_substring(string, substring):
-    count = 0
-    for i in range(0,len(string)):
-        if string[i:len(substring)+i] == substring:
-            count += 1
+
+    #Using list comprehension and slicing , i have count the occcurence of substring in string. and then i have append 1 in list,
+    #after the i have sum all using sum function
+    count = sum([1 for _ in range(0,len(string)) if string[_:len(substring)+_] == substring])
     return count
 
 
