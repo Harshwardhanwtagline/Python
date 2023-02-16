@@ -2,12 +2,14 @@ from datetime import datetime, timedelta
 
 def difference(start_time, end_time):
 
+    #In below code i have loop over start_time and end_time, after then i have separated the night_interval on base of 1 hr interval using timedelta
     night_interval_hr = []
     while end_time > start_time:
         if datetime(start_time.year, start_time.month, start_time.day,0,0,0) < start_time < datetime(start_time.year, start_time.month, start_time.day,6,0,0):
             night_interval_hr.append((start_time, start_time + timedelta(hours=1)))
         start_time += timedelta(hours=1)
-
+    
+    #i have calculate the total of night_interval_hr and remove it from total_hr by subtracing the start_time and end_time.
     night_hr = [(date[-1]-date[0]).total_seconds() for date in night_interval_hr]
     total_night_hr = sum(night_hr)/3600
     time_difference_seconds = (end_time - start_time).total_seconds()
