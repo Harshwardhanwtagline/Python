@@ -6,17 +6,22 @@ class BankAccount:
         self.pin=pin
     
     def check_pin(self, pin):
+        #Checking the pin on bases of condition and then giving account information
         if self.pin == pin:
             return "Account Holder Name: {}\nAccount Number: {}\nTotal Balance: {}".format(self.acc_name, self.acc_number, self.balance)
         return "Please Enter Correct Pin"
     
     def deposit(self, pin, amount):
+
+        #Checking the pin on bases of condition and then depositing money in  account.
         if (self.pin == pin):
             self.balance += amount
             return "{} rupees are successfully added to your account.".format(amount)
         return "Please Enter Correct Pin"
 
     def withdraw(self, pin, amount):
+
+        #Checking the pin on bases of condition and then withdrawing money form account.
         if (self.pin == pin):
             if self.balance > amount:
                 self.balance -= amount
