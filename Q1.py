@@ -7,8 +7,8 @@ def numbers_operation(user_input, number_list):
         odd_sum = sum([i for i in number_list if i % 2 != 0])
         return "Sum of odd Number: {}".format(odd_sum)
     elif user_input.lower() == "d":
-        dict_1 = {num: number_list.count(num) for num in number_list}
-        duplicate_num = max(zip(dict_1.values(), dict_1.keys()))
+        num_count = {num: number_list.count(num) for num in number_list}
+        duplicate_num = max(zip(num_count.values(), num_count.keys()))
         return (
             "Number of duplicate numbers: {1} # ({1}, {0} repeats in the list)".format(
                 duplicate_num[0], duplicate_num[1]
@@ -16,7 +16,7 @@ def numbers_operation(user_input, number_list):
         )
     elif user_input.lower() == "e":
         return "List without duplicate numbers: {}".format(list(set(number_list)))
-    return "Invalid Input \nPlease Give Valid Input"
+    return "Invalid Input \nPlease Give Valid Input From(A, B, C, D, E)"
 
 
 if __name__ == "__main__":
