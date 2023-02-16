@@ -1,9 +1,11 @@
 def sentences_word(sentences_list):
-    word_trees = [i.split(" ") for i in sentences]
-    word_list = [j for i in word_trees for j in i]
-    dict_1 = {word: word_list.count(word) for word in word_list}
-    print("word_trees: {}".format(word_trees))
-    print("Number of time each word appears: {}".format(dict_1))
+    #Using list comprehension and and split function i have make list of list.
+    word_trees = [sentences.split(" ") for sentences in sentences_list]
+    #Using list comprehension i have open all list of list into one list(means i have add all word into one list)
+    word_list = [word for word_list in word_trees for word in word_list]
+    #using dictionary comprehension i have count number of word appearance in list.
+    word_count = {word: word_list.count(word) for word in word_list}
+    print("word_trees: {}".format(word_trees), "\nNumber of time each word appears: {}".format(word_count))
 
 
 if __name__ == "__main__":
