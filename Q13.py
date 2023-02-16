@@ -8,15 +8,19 @@ class Number:
         return self.numbers
     
     def change_original_values(self, func):
+        #Changing the value of list element on bases of lambda function
         return list(map(func, self.numbers))
     
     def filter_values(self, filter_func):
+        #filtering the list element on bases of filter_func-lambda function
         return list(filter(filter_func, self.numbers))
     
     def compound_the_numbers(self, reduce_func):
+        #compressing all the list element bases of reduce_func-lambda function
         return functools.reduce(reduce_func, self.numbers)
     
     def sort(self):
+        #sorting list using sorted function
         return sorted(self.numbers)
 
 
