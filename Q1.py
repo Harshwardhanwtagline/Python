@@ -7,9 +7,9 @@ def numbers_operation(user_input, number_list):
         odd_sum = sum([i for i in number_list if i % 2 != 0])
         return "Sum of odd Number: {}".format(odd_sum)
     elif user_input.lower() == "d":
-        #In below line i have count the dulipcate form given list
+        #In below line i have count the dulipcate form given list using dictionary comprehension.
         num_count = {num: number_list.count(num) for num in number_list}
-        # duplicate_num is for finding max element occur in list. 
+        # duplicate_num is for finding max element occur in list using max function. 
         duplicate_num = max(zip(num_count.values(), num_count.keys()))
         return (
             "Number of duplicate numbers: {1} # ({1}, {0} repeats in the list)".format(
