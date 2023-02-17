@@ -34,11 +34,10 @@ class BankAccount:
             self.acc_name, self.acc_number, self.balance
         )
 
-
 if __name__ == "__main__":
     b1 = BankAccount(acc_name="Ram", acc_number=12345, balance=1000, pin=3456)
 
-    # print(b1.check_pin(3456))
+    print(b1.check_pin(3456))
     print(b1.deposit(3456, 1000))
-    # print(b1.withdraw(3456, 1200))
-    # print(b1)
+    print(b1.withdraw(3456, 1200))
+    print(b1)
