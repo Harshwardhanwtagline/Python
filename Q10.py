@@ -53,11 +53,11 @@ def number_triangle_pattern(n):
 
 
 if __name__ == "__main__":
-    n = 6
-    # diamond_pattern(n)
-    # diamond_mid_pattern(n)
+    n = 5
+    diamond_pattern(n)
+    diamond_mid_pattern(n)
     triangle_pattern(n)
-    # square_pattern(n)
-    # number_triangle_pattern(n)
+    square_pattern(n)
+    number_triangle_pattern(n)
 
     
