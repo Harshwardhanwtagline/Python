@@ -24,7 +24,7 @@ def difference(start_time, end_time):
     total_time = (end_time - start_time).total_seconds() / 3600
     # Here i have calculate total_night_time in hours
     total_night_time = sum(
-        [(i.upper - i.lower).total_seconds() / 3600 for i in interval_night]
+        [(interval.upper - interval.lower).total_seconds() / 3600 for interval in interval_night]
     )
     return total_time - total_night_time
 
