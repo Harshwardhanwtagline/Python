@@ -12,9 +12,9 @@ def difference(start_time, end_time):
     #i have calculate the total of night_interval_hr and remove it from total_hr by subtracing the start_time and end_time.
     night_hr = [(date[-1]-date[0]).total_seconds() for date in night_interval_hr]
     total_night_hr = sum(night_hr)/3600
-    time_difference_seconds = (end_time - start_time).total_seconds()
-    time_difference_hours = time_difference_seconds / 3600
-    return time_difference_hours-total_night_hr
+    total_time_seconds = (end_time - start_time).total_seconds()
+    total_time_hours = total_time_seconds / 3600
+    return total_time_hours-total_night_hr
 
 if __name__ == "__main__":
     start_time =  datetime.strptime("2022-10-18 02:00:00", "%Y-%m-%d %H:%M:%S")
