@@ -1,9 +1,12 @@
 def list_sort(num_list):
-    #using bubble sort algorithm i have sorted the list
-    for i in range(0, len(num_list) - 1):
-        for j in range(0, len(num_list) - i - 1):
-            if num_list[j] > num_list[j + 1]:
-                num_list[j], num_list[j + 1] = num_list[j + 1], num_list[j]
+    # using bubble sort algorithm i have sorted the list
+    for index in range(0, len(num_list) - 1):
+        for cur_index in range(0, len(num_list) - index - 1):
+            if num_list[cur_index] > num_list[cur_index + 1]:
+                num_list[cur_index], num_list[cur_index + 1] = (
+                    num_list[cur_index + 1],
+                    num_list[cur_index],
+                )
     return num_list
 
 
