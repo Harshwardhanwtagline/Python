@@ -30,23 +30,32 @@ import copy
 # original_list_shallow.append(900)
 # print("Shallow Copy \n original-list-shallow: " ,original_list_shallow,"\n List-shallow: " , list_shallow)
 
-import threading
-import time
+# import threading
+# import time
 
-def sq():
-    for i in range(1, 10):
-        print(i)
-        time.sleep(0.1)
+# def sq():
+#     for i in range(1, 10):
+#         print(i)
+#         time.sleep(0.1)
 
-def sq_2():
-    for i in range(1, 10):
-        print(i*i, " second func")
-        time.sleep(0.1)
+# def sq_2():
+#     for i in range(1, 10):
+#         print(i*i, " second func")
+#         time.sleep(0.1)
 
-th1 = threading.Thread(target=sq)
-th2 = threading.Thread(target=sq_2)
+# th1 = threading.Thread(target=sq)
+# th2 = threading.Thread(target=sq_2)
 
-th1.start()
-th2.start()
-th1.join()
-th2.join()
+# th1.start()
+# th2.start()
+# th1.join()
+# th2.join()
+
+
+employee = [{"name": "hjbdsd", "name1": "meet"}, {"name": "ajsbd"}, {"name": "ajsbd"}]
+
+for i in employee:
+    if "name1" in i:
+        print(i["name1"])
+    else:
+        print(i["name"])
