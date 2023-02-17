@@ -23,7 +23,7 @@ def triangle_pattern(n):
     #i have iterated over loop to print the pattern, but over here i have print _ in the center of triangle using condition.
     for i in range(1, n+1):
         for j in range(1, i + 1):
-            if j == 1 or j == i or i == 5:
+            if j==1 or j==i or i==5:
                 print("*", end="")
             else:
                 print("_", end="")
@@ -53,11 +53,11 @@ def number_triangle_pattern(n):
 
 
 if __name__ == "__main__":
-    n = 6
-    # diamond_pattern(n)
-    # diamond_mid_pattern(n)
+    n = 5
+    diamond_pattern(n)
+    diamond_mid_pattern(n)
     triangle_pattern(n)
-    # square_pattern(n)
-    # number_triangle_pattern(n)
+    square_pattern(n)
+    number_triangle_pattern(n)
 
     
